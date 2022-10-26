@@ -1,0 +1,4 @@
+s = input()
+slist = s.split()
+print(*slist, sep='\n')
+    

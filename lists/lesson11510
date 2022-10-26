@@ -1,0 +1,5 @@
+s = input()
+sept = input()
+print(sept.join(s))
+
+print(*s, sep=sept)
