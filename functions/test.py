@@ -1,6 +1,9 @@
-def get_sum(x, y, z):
-    print('Сумма равна', x + y + z)
-    return x + y + z
-    
+n = int(input())
+list1 = []
+list2 = []
 
-#get_sum(1, 2, 3)
+for i in range(n):
+    list3 = [int(i) for i in input().split()]
+    list2 += list3
+    
+print(list2)
