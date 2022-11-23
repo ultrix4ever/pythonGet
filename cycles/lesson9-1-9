@@ -1,0 +1,11 @@
+s = input()
+total_glas = 0
+total_soglas = 0
+
+for c in range(len(s)):
+    if s[c] in 'ауоыиэяюёеAУОЫИЭЯЮЁЕ':
+        total_glas+=1
+    if s[c] in 'бвгджзйклмнпрстфхцчшщБВГДЖЗЙКЛМНПРСТФХЦЧШЩ':
+        total_soglas+=1
+print('Количество гласных букв равно', total_glas)
+print('Количество согласных букв равно', total_soglas)
