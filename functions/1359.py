@@ -13,3 +13,4 @@ txt = input()
 
 # вызываем функцию
 print(convert_to_python_case(txt))
+
