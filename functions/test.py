@@ -1,14 +1,10 @@
-def is_prime(password):
-    counter = 0
-    num = int(password[1])
-    for i in range(2, num//2 + 1):
-        if num % i == 0:
-            counter +=1
-    if counter <=0:
-        return True
-    else:
-        return False
+text = input()
+text1 =''
+for i in range(0, len(text)):
+    if text[i].isupper() == True:
+        text1 += '_'
+    text1 += text[i].lower()
+text = text1[1:]
 
-txt = input()
-password = txt.split(':')
-print(is_prime(txt))
+
+print(text)
