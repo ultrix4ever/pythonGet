@@ -1,0 +1,12 @@
+n = int(input())
+l = []
+rez = ''
+for i in range(n):
+    sn = input()
+    l.append(sn)
+k = int(input())
+for s in range(n):
+    st = l[s]
+    if len(st) >= k:
+        rez += st[1]
+print(rez)
