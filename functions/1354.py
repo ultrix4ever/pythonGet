@@ -1,23 +1,13 @@
-# считываем данные
-num = int(input())
-
-# объявление функции поиска простых чисел
-def is_prime(num):
-    flag = True
-    for i in range(2, num//2 + 1):
-        if num % i == 0:
-            flag = False
-    if num > 1 and flag == True:
+# объявление функции
+def is_password_good(password):
+    if len(txt) >= 8 and password.isalpha() == False and password.isdigit() == False and password!=password.lower() and password!=password.upper():
         return True
-    else:
+    else: 
         return False
     
-# объявление функции поиска следующего простого числа после введенного
-def get_next_prime(num):
-    while is_prime(num+1) == False:
-        num += 1
-    return num
-          
-        
+
+# считываем данные
+txt = input()
+
 # вызываем функцию
-print(get_next_prime(num)+1)
+print(is_password_good(txt))
