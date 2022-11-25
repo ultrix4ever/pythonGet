@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # считываем данные
 num = int(input())
 
@@ -14,3 +15,15 @@ def is_prime(num):
         
 # вызываем функцию
 print(is_prime(num))
+=======
+text = input()
+text1 =''
+for i in range(0, len(text)):
+    if text[i].isupper() == True:
+        text1 += '_'
+    text1 += text[i].lower()
+text = text1[1:]
+
+
+print(text)
+>>>>>>> 6336e4ad89b545ab4e90087cf05f613c3ab81bce

@@ -6,4 +6,9 @@ def is_valid_triangle(a, b, c):
     else:
         return False
 
+<<<<<<< HEAD
 print(is_valid_triangle(a, b, c))
+=======
+print(is_valid_triangle(a, b, c))
+
+>>>>>>> 6336e4ad89b545ab4e90087cf05f613c3ab81bce
