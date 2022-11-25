@@ -1,9 +1,16 @@
-n = int(input())
-list1 = []
-list2 = []
+# считываем данные
+num = int(input())
 
-for i in range(n):
-    list3 = [int(i) for i in input().split()]
-    list2 += list3
-    
-print(list2)
+# объявление функции
+def is_prime(num):
+    flag = True
+    for i in range(2, num//2 + 1):
+        if num % i == 0:
+            flag = False
+    if num > 1 and flag == True:
+        return True
+    else:
+        return False
+        
+# вызываем функцию
+print(is_prime(num))
