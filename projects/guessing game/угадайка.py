@@ -2,16 +2,15 @@ import random
 
 def guessing_game(x,y):
     num_random = random.randint(x,y)
+    count = 0
     while True:
         num = int(input('Введите число  '))
-        count = 1
+        count += 1
         if is_valid(num, x, y) == True:
             if num < num_random:
-                print('Слишком мало, попробуйте еще раз')
-                count += 1
+                print('Слишком мало, попробуйте еще раз')          
             elif num > num_random:
                 print('Слишком много, попробуйте еще раз')
-                count += 1
             else:
                 print('Вы угадали, поздравляем!', 'Колличество попыток =', count)
                 break
@@ -33,7 +32,7 @@ y = int(input('Ввездите второе число диапазона. Он
 guessing_game(x,y)
 
 while True:
-    if input('Хотите сыграть еще раз').lower() in ['да', 'lf']:
+    if input('Хотите сыграть еще раз  Да\Нет  ').lower() in ['да', 'lf']:
         print('Добро пожаловать в числовую угадайку')
         x = int(input('Ввездите первое число диапазона  '))
         y = int(input('Ввездите второе число диапазона. Оно должно быть больше первого  '))
