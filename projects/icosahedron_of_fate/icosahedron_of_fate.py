@@ -9,8 +9,9 @@ while True:
     input()
     print(random.choice(answers))
     print('Хочешь задать еще вопрос?  да\нет ')
-    if input().lower() in ['да', 'lf']:
+    if input().lower() in ['да', 'lf', 'l', 'д']:
         print('Хорошо!!!')
     else:
+        print('Возвращайся если возникнут вопросы !')
         break
 
