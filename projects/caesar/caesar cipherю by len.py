@@ -8,7 +8,6 @@ def caesar(text):
 
     # Находим длины слов в тексте и создаём из них список
     list_gisit = []
-    new_list = []
     for i in range(len(text)):
         count = 0
         for j in range(len(text[i])):
