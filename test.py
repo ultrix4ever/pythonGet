@@ -1,7 +1,5 @@
-digits = list('0123456789')
-lowercase_letters = list('abcdefghijklmnopqrstuvwxyz')
-uppercase_letters = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
-punctuation = list('!#$%&*+-=?@^_')
-chars = []
-ext_simbols = ['i', 'l', '1', 'L', 'o', '0', 'O']
-
+place = 13
+step = 7
+alphas = 26
+index = (place + int(step)) % alphas
+print(index)
