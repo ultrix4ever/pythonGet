@@ -44,9 +44,10 @@ while True:
             pass_gen()
             count +=1
             if count > int(values['Pass_count']):
-                sg.popup_scrolled(passwd)
-                window.close()
-                break 
+#                sg.popup_scrolled(passwd)
+#                window.close()
+                break
+#    break 
 
 event, values = window.read()
 print(event, values)
