@@ -1,57 +1,51 @@
-import PySimpleGUI as sg
 import random
-
-digits = list('0123456789')
-lowercase_letters = list('abcdefghijklmnopqrstuvwxyz')
-uppercase_letters = list('ABCDEFGHIJKLMNOPQRSTUVWXYZ')
-punctuation = list('!#$%&*+-=?@^_')
-chars = []
-passwd = []    
-count = 0
-
-def pass_gen():
-    passwd = []
-    for i in range(int(values['Pass_len'])):
-        passwd += random.choice(chars) 
-    return passwd
-
-layout =   [[sg.Text('Выберите сложность пароля')],
-            [sg.Checkbox('Включать цифры', enable_events=True, key='add_digits_in_chars')], 
-            [sg.Checkbox('Включить прописные буквы', enable_events=True, key='add_upper_letters_in_chars')], 
-            [sg.Checkbox('Включить строчные буквы', enable_events=True, key='add_lower_leters_in_chars')],
-            [sg.Checkbox('Включить символы', enable_events=True, key='add_punctuation_leters_in_chars')],
-            [sg.InputText('Укажите длину пароля', key='Pass_len')],
-            [sg.InputText('Укажите колличество паролей', key='Pass_count')],
-            [sg.Button('Генерировать')]]
+import PySimpleGUI as sg
 
 
-window = sg.Window('Password generator by Targem', layout)
+def pass_gen(length, char_list):
+    password = ''
+    for i in range(length):
+        password += random.choice(char_list)
+    return password
 
+# Create the GUI
+layout = [[sg.Text('Генератор паролей')],
+          [sg.Text('Укажите сложность пароля:')],
+          [sg.Checkbox('Добавить цифры', default=True), sg.Checkbox('Добавить прописные буквы', default=True),
+           sg.Checkbox('Добавить строчные буквы', default=True), sg.Checkbox('Добавить символы', default=True)],
+          [sg.Text('Длина пароля'), sg.Slider(range=(6, 32), default_value=8, orientation='h')],
+          [sg.Text('Колличество паролей'), sg.Slider(range=(0, 32), default_value=3, orientation='h')],
+          [sg.Button('Генерировать'), sg.Output(size=(35, 33), key='-OUTPUT-')]]
+
+window = sg.Window('Targem games', layout)
+
+# Create the password based on user input
 while True:
     event, values = window.read()
-    print(event, values) 
-    if event == 'add_digits_in_chars':
-            chars += digits
-    if event == 'add_upper_leters_in_chars':
-            chars += uppercase_letters
-    if event == 'add_lower_leters_in_chars':
-            chars += lowercase_letters
-    if event == 'add_punctuation_leters_in_chars':
-            chars += punctuation
+    if event == sg.WIN_CLOSED:
+        break
+    length = int(values[4])
+    Count = int(values[5])
+    pass_list= []
 
-    if event == 'Генерировать':
-        while True:
-            pass_gen()
-            count +=1
-            if count > int(values['Pass_count']):
-#                sg.popup_scrolled(passwd)
-#                window.close()
-                break
-#    break 
+    # Create the list of characters that will be used in the password
+    char_list = []
+    if values[0]:
+        char_list.extend(list('1234567890'))
+    if values[1]:
+        char_list.extend(list('ABCDEFGHIJKLMNOPQRSTUVWXYZ'))
+    if values[2]:
+        char_list.extend(list('abcdefghijklmnopqrstuvwxyz'))
+    if values[3]:
+        char_list.extend(list('!@#$%^&*()_+-='))
 
-event, values = window.read()
-print(event, values)
+    # Generate the password
+    for i in range(Count):
+        pass_list.append(pass_gen(length, char_list))
 
-       
-            
-            
+
+    # Output the password
+    window['-OUTPUT-'].update(print(*pass_list, sep='\n'))
+
+# Close the GUI
+window.close()
