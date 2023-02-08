@@ -1,11 +1,13 @@
-import math
 
-a = int(input())
-b = int(input())
-print(a+b)
-print(a-b)
-print(a*b)
-print(a/b)
-print(a//b)
-print(a%b)
-print(math.sqrt((a**10)+(b**10)))
+m = float(input())
+rst = float(input())
+
+IMT = m/(rst*rst)
+
+if IMT > 25:
+    print('Избыточная масса')
+elif IMT < 18.5:
+    print('Недостаточная масса')
+else:
+    print('Оптимальная масса')
+
