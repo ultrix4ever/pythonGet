@@ -1,9 +1,0 @@
-n = int(input())
-l = []
-l1 = []
-for i in range(n):
-    num = int(input())
-    l.append(num)
-for i in range(0, n-1):
-    l1.append(l[i]+l[i+1])
-print(l1)

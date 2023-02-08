@@ -1,7 +1,0 @@
-s = input()
-x = 'хорош'
-s = s.lower()
-if x in s:
-    print('YES')
-else:
-    print('NO')

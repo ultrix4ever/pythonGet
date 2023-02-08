@@ -1,0 +1,14 @@
+s = input()
+if len(s) % 2 !=0:
+    ind = len(s) / 2
+    ind = int(ind)
+    s1 = s[:ind+1]
+    s2 = s[ind+1:]
+    #print(ind)
+else:
+    ind = len(s) / 2
+    ind = int(ind)
+    s1 = s[:ind]
+    s2 = s[ind:]
+
+print(s2+s1)

@@ -1,0 +1,9 @@
+numbers = [8, 9, 10, 11]
+numbers.insert(1, '17')
+numbers.insert(-1, '4')
+numbers.insert(-1, '5')
+numbers.insert(-1, '6')
+numbers.remove(0)
+numbers.extend(numbers.copy)
+numbers.insert(2, '25')
+print(numbers)

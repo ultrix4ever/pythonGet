@@ -1,6 +1,0 @@
-n = int(input())
-l = []
-for i in range(n):
-    st=input()
-    l.extend(st)
-print(l)

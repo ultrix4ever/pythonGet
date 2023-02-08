@@ -1,0 +1,5 @@
+s = input()
+for c in range (len(s)):
+    if c % 3 != 0:
+        char=s[c]
+        print(char, end='', sep='')

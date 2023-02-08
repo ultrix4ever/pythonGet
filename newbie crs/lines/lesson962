@@ -1,0 +1,21 @@
+num = int(input())
+s = input()
+s1 = ''
+char = ''
+for c in range(len(s)):
+    char = s[c]
+    if 122 > ord(char) - num >= 97:
+        order = ord(char) 
+        order = order - num
+        char = chr(order)
+        s1 += char
+        char = s[c]
+    if ord(char) - num < 97:
+        order = ord(char)
+        num1 = order - 97
+        num1 = num - num1
+        order = 123 - num1
+        char = chr(order)
+        s1 += char
+        char = s[c]
+print(s1)

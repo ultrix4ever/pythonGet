@@ -1,4 +1,0 @@
-NumList = input().split()
-for i in range(len(NumList)):
-    NumList[i] = int(NumList[i])
-    print(NumList[i] * '*', sep='\n' )

@@ -1,0 +1,2 @@
+pList = input().split('\\')
+print(*pList, sep='\n')

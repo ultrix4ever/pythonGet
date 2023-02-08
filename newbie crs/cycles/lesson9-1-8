@@ -1,0 +1,10 @@
+s = input()
+total_plus = 0
+total_mult = 0
+for c in range(len(s)):
+    if s[c] == '+':
+        total_plus+=1
+    if s[c] == '*':
+        total_mult+=1
+print('Символ + встречается', total_plus, 'раз')
+print('Символ * встречается', total_mult, 'раз')

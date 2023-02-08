@@ -1,0 +1,9 @@
+n = int(input())
+sl = []
+for i in range(n):
+    s=input()
+    sl.append(s)
+sch = input()
+for i in range(len(sl)):
+    if sch.lower() in sl[i].lower():
+        print(sl[i])
