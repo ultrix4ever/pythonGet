@@ -10,5 +10,14 @@ for i in range(n):
         matrix[i][j] = input()
 
 # Выводим матрицу
-for row in matrix:
-    print(" ".join(row))
+for c in range(n):
+    for r in range(m):
+        print(matrix[c][r], end=' ')
+    print()
+
+print()
+
+for c in range(m):
+    for r in range(n):
+        print(matrix[r][c], end=' ')
+    print()
