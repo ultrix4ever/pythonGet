@@ -1,13 +1,2 @@
-n = 8
-matrix = [[0]*n for _ in range(n)] 
-
-print(matrix)
-
-for i in range(n):                     # заполняем главную диагональ единицами, а побочную двойками
-    matrix[i][i] = 1
-    matrix[i][n-i-1] = 2
-
-for r in range(n):                     # выводим матрицу
-    for c in range(n):
-        print(matrix[r][c], end=' ')
-    print()
+a = 6 / 2 
+print(a)
