@@ -12,7 +12,4 @@ for key,val in result.items():
         max_list.append(key)
 
 max_list = sorted(max_list)
-
-
-
 print(max_list[0])

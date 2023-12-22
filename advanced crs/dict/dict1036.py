@@ -15,7 +15,7 @@ for key,val in result.items():
     if val == min(result.values()):
         min_list.append(key)
 
-print(result)
+#print(result)
 
 min_list = sorted(min_list)
 print(min_list[0])
