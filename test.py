@@ -1,4 +1,10 @@
-list1 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
-list1[3].append(7000)
+from decimal import *
 
-print(list1)
+num = Decimal(0.1) + Decimal(0.1) + Decimal(0.1) - Decimal(0.3)
+
+if num == 0:
+    print('YES')
+else:
+    print('NO')
+
+print(num)
